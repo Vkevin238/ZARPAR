@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pagina Principal</title>
+    <style>
+        /* Estilos para los botones */
+        .button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+        .logo {
+            max-width: 180px; /* Ancho máximo de 120 píxeles */
+            height: 120px; /* Altura de 80 píxeles */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <?php
+        session_start();
+        // Establece la zona horaria a Colombia
+        date_default_timezone_set('America/Bogota');
+        // Verifica si el usuario ha iniciado sesión
+        if (!isset($_SESSION["usuario_id"])) {
+            header("Location: index.php"); // Redirige a la página de inicio de sesión
+            exit();
+        }
+        ?>
+        <img src="logo.jpg" alt="Logo de la empresa" class="logo">
+        <h3>Selecciona una opcion:</h3>
+        <!-- Botones que redireccionarán a otras páginas -->
+        <a href="crear_usuarios.php" class="button">Crear Usuarios</a>
+        <a href="file.html" class="button">Cargar Base de Datos</a>
+        <a href="ventas.php" class="button">Ventas</a>
+        <a href="standby.php" class="button">Standby</a>
+        <a href="Crear Registro.php" class="button">Crear Registro</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+/* Estilos para el contenedor principal */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Fondo gris claro */
+}
+
+/* Estilos para el contenedor de logo y formulario */
+.logo-and-form-container {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el contenedor del logo */
+.logo-container {
+    margin-bottom: 20px; /* Espacio entre el logo y el formulario */
+}
+
+/* Estilos para el logo */
+.logo {
+    max-width: 120px; /* Ancho máximo de 120 píxeles */
+    height: 80px; /* Altura de 80 píxeles */
+}
+
+/* Estilos para el formulario */
+.form-container {
+    text-align: center;
+}
+
+/* Estilos para el botón */
+.button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+
+    /* Estilos para centrar el botón */
+    display: block;
+    margin: 0 auto; /* Margen automático en horizontal */
+}
+
+/* Estilos adicionales para los campos de entrada */
+label, input[type="text"], input[type="password"] {
+    display: block;
+    margin: 10px 0;
+}
+
+/* Estilos para el mensaje de error */
+.error {
+    color: red;
+}
